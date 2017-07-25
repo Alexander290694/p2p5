@@ -1,0 +1,31 @@
+<div style="padding:5%; background-color: rgba(0, 0, 0, 0.4); text-align: center; color:yellow">
+<h1 >Elaborado por: Alexander Garita, Alan Barquero</h1>
+</div>
+<body style="background-image: url(https://2.bp.blogspot.com/-n8tZVLszGAQ/U6z3as4gyXI/AAAAAAAAGdY/f4GbVsmlhvg/s1600/AutoWallpaper_part_120007.jpg">
+<div class="princ" style="float:center; text-align: center;margin: 10%; background-color: rgba(0, 0, 0, 0.4); padding: 30px 90px; color:white; width: 80%; box-sizing: border-box;border-radius: 5px">
+ 
+ <div style="margin: 10px; padding: 10px;float:center; font-size:20px; text-align:center; width:96%; border:solid; border-radius: 5px; background-color: rgba(255, 0, 0, 0.6); border-color:white ; border-width:thin">
+ 
+<%= form_tag "/buscar/create", method: :get, remote: true, id: "search-form" do%>
+
+ <%= text_field_tag :keyword, nil, placeholder: "Buscar Mensajes" %> 
+   <%= content_tag :button, type: :submit do %>
+   Buscar
+   <%end%> 
+<%end%>
+
+</div>
+
+<br> 
+
+<div id="resultados" style="margin: 10px; padding: 10px;float:center; font-size:20px; text-align:center; width:96%; border:solid; border-radius: 5px; background-color: rgba(0, 0, 0, 0.4); border-color:white ; border-width:thin">
+</div>
+
+<br> 
+
+<li style="margin: 10px; padding: 10px;float:center; font-size:20px; text-align:center; width:96%; border:solid; border-radius: 5px; background-color: rgba(0, 0, 0, 0.4); border-color:white; border-width:thin">
+<%= link_to "MENU PRINCIPAL", "/", method: :get %>
+</li>
+
+</div>
+</body>

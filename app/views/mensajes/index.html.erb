@@ -1,0 +1,43 @@
+<div style="padding:5%; background-color: rgba(0, 0, 0, 0.4); text-align: center; color:yellow">
+<h1 >Elaborado por: Alexander Garita, Alan Barquero</h1>
+</div>
+<body style="background-image: url(https://2.bp.blogspot.com/-n8tZVLszGAQ/U6z3as4gyXI/AAAAAAAAGdY/f4GbVsmlhvg/s1600/AutoWallpaper_part_120007.jpg">
+<div class="princ" style="float:center; text-align: center;margin: 10%; background-color: rgba(0, 0, 0, 0.4); padding: 30px 90px; color:white; width: 80%; box-sizing: border-box;border-radius: 5px" >
+
+<p id="notice"><%= notice %></p>
+
+<h1 style="margin: 10px; padding: 10px;float:center; font-size:20px; text-align:center;width:96%; border:solid; border-radius: 5px; background-color:rgba(255, 0, 0, 0.6); border-color:white; border-width:thin">CENTRO DE MENSAJES</h1>
+
+<br>
+
+<table style="margin: 10px; padding: 10px;float:center; font-size:20px; text-align:center; width:96%; border:solid; border-radius: 5px; background-color: rgba(0, 0, 0, 0.4); border-color:white; border-width:thin">
+  <thead>
+    <tr style="margin: 10px; padding: 10px;float:center; font-size:20px; text-align:center; width:96%; border:solid; border-radius: 5px; background-color: rgba(0, 0, 0, 0.4); border-color:white; border-width:thin">
+      <th style="font-size:15px">DE</th>
+      <th style="font-size:15px">PARA</th>
+      <th style="font-size:15px">CONTENIDO</th>
+      <th style="font-size:15px"colspan="2"> OPCIONES</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mensajes.each do |mensaje| %>
+      <tr style="margin: 10px; padding: 10px;float:center; font-size:15px; text-align:center; width:96%; border:solid; border-radius: 5px; background-color: rgba(0, 0, 0, 0.4); border-color:white; border-width:thin">
+        <td style="font-size:15px"><%= mensaje.De %></td>
+        <td style="font-size:15px"><%= mensaje.Para %></td>
+        <td style="font-size:15px"><%= mensaje.Contenido %></td>
+        <td style="font-size:15px"><%= link_to 'Edit', edit_mensaje_path(mensaje) %></td>
+        <td style="font-size:15px"><%= link_to 'Destroy', mensaje, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<li style="margin: 10px; padding: 10px;float:center; font-size:20px; text-align:center; width:96%; border:solid; border-radius: 5px; background-color: rgba(0, 0, 0, 0.4);; border-color:white; border-width:thin ">
+<%= link_to "MENU PRINCIPAL", "/", method: :get %>
+</li>
+
+</div>
+</body>
